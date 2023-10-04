@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooping Cart</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+
+            <a href="#" class="logo">Shopping Cart</a>
+            <div>
+
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                <span class="quantity">0</span>
+            </div>
+        </div>
+
+              <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <i class='bx bx-window-close' id="close"></i>
+
+                <div class="list">
+                    <ul class="cart-list">
+                        
+                    </ul>
+                  
+                    <!-- <i class='bx bxs-trash-alt cart-remove'></i> -->
+                    
+                </div>
+
+           <div class="totalDiv">
+            <div class="total-title">Total:</div>
+            <div class="total" ></div>
+           </div>
+           <button type="button" class="btn-buy">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="content">    
+        </div>
+    </section>
+    
+    <script src="shoppingCart.js"></script>
+</body>
+</html>

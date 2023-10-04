@@ -1,0 +1,192 @@
+
+*{
+    font-family: sans-serif, "Poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color:#fd4646;
+    --sec-color: #4946fd;
+    --text-color:#171427;
+    --bg-color:#fff;
+}
+body{
+    color: var(--text-color);
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: 0 1px 2px ;
+    z-index: 100;
+}
+.header .nav{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 82%;
+    margin: auto;
+}
+.header .quantity{
+    position: absolute;
+    right: 135px;
+    top: 10px;
+}
+.header .nav .logo{
+    font-size: 1.1rem;
+    color: var(--sec-color);
+    text-transform: uppercase;
+}
+.header #cart-icon{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* content*/
+.shop{
+    margin-top: 90px;
+}
+.shop .section-title{
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.shop .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap:20px ;
+}
+.shop .content .product-box{
+    position: relative;
+    border: 2px solid #999;
+    overflow: hidden;
+}
+.shop .content .product-box img{
+    height: 250px;
+    width: 100%;
+}
+.shop .content .product-box img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.shop .content .product-box .title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.shop .content .product-box .price{
+    font-size: 30px;
+    margin: 5px;
+}
+.shop .content .product-box .add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 10px;
+}
+/* cart*/
+.cart{
+    position: fixed;
+    top: 0;
+    right : 0;
+    right: -100%;
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    overflow-y: scroll;
+    border: 1px solid var(--text-color) ;
+    transition: 1.5s;
+}
+.cart.active{
+    right:0;
+    transition: 0.5s;
+}
+.cart #close{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.cart .title{
+    text-align: center;
+}
+.cart .box{
+    display: grid;
+    grid-template-columns: 150px repeat(350, 1fr); ;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+}
+.cart img{
+    height: 100px;
+    width: 100%;
+}
+.cart .box input{
+    width: 25px;
+}
+.cart .detail{
+    display: grid;
+    row-gap: 20px;
+}
+.cart .detail .title{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.cart .totalDiv{
+    border-top: 1px solid var(--text-color);
+    margin-top: 20px;
+    padding: 10px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart .box .change{
+    display: flex;
+    align-items: center;
+   padding: 15px;
+}
+.cart .box .change button{
+    margin: 5px;
+    text-align: center;
+    padding:  2px 4px;
+    font-weight: bold;
+    border: none;
+}
+.cart .btn-buy{
+      margin: auto;
+    border: none;
+    background-color: #171427;
+    color: #fff;
+    padding: 8px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+@media (max-width:767px){
+    .header .quantity{
+        right: 75px;
+    }
+}
